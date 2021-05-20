@@ -9,10 +9,10 @@ import org.jibble.pircbot.*;
 import java.util.regex.*;
 
 // bot class extending abstract pircbot class
-public class TotallyNotEvilWeatherBot extends PircBot {
+public class ScryfallWeatherBot extends PircBot {
 
 	// default constructor
-	public TotallyNotEvilWeatherBot() {
+	public ScryfallWeatherBot() {
 		this.setName("NotEvilWeatherBot");
 	}
 	
@@ -119,20 +119,20 @@ public class TotallyNotEvilWeatherBot extends PircBot {
 		// Given code below
 		
 		// creates new bot
-		TotallyNotEvilWeatherBot actuallyEvilBot = new TotallyNotEvilWeatherBot();
+		ScryfallWeatherBot thisBot = new ScryfallWeatherBot();
 		
 		// enables debugging output
-		actuallyEvilBot.setVerbose(true);
+		thisBot.setVerbose(true);
 		
 		//connects to IRC server
-		actuallyEvilBot.connect(serverName);
+		thisBot.connect(serverName);
 	
 		// sends connection message and instructions
-		actuallyEvilBot.joinChannel(channelName);
-		actuallyEvilBot.sendMessage(channelName, "Hello there! This is Totally-Not-Evil Weather Bot being developed by Hansen Li!");
-		actuallyEvilBot.sendMessage(channelName, "For weather, make sure you include 'weather' and the 5 digit zipcode or city!");
-		actuallyEvilBot.sendMessage(channelName, "For MtG card info, make sure you start with 'card' and then the card name!");
-		actuallyEvilBot.sendMessage(channelName, "For city and card names, use '+'s to replace spaces.");
+		thisBot.joinChannel(channelName);
+		thisBot.sendMessage(channelName, "Hello there! This is Totally-Not-Evil Weather Bot being developed by Hansen Li!");
+		thisBot.sendMessage(channelName, "For weather, make sure you include 'weather' and the 5 digit zipcode or city!");
+		thisBot.sendMessage(channelName, "For MtG card info, make sure you start with 'card' and then the card name!");
+		thisBot.sendMessage(channelName, "For city and card names, use '+'s to replace spaces.");
 		
 		
 	}
